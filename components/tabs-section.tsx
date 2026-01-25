@@ -38,11 +38,10 @@ export function TabsSection({
           <div className="flex items-center gap-2 p-1 bg-card rounded-xl border border-border">
             <Button
               onClick={() => onTabChange("quick")}
-              className={`relative px-6 py-2.5 rounded-lg font-semibold transition-all ${
-                activeTab === "quick"
+              className={`relative px-6 py-2.5 rounded-lg font-semibold transition-all ${activeTab === "quick"
                   ? "bg-primary text-primary-foreground shadow-[0_0_20px_rgba(74,228,105,0.3)]"
                   : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted"
-              }`}
+                }`}
             >
               <Zap className="h-4 w-4 mr-2 inline" />
               Quick BattleZ
@@ -52,11 +51,10 @@ export function TabsSection({
             </Button>
             <Button
               onClick={() => onTabChange("community")}
-              className={`relative px-6 py-2.5 rounded-lg font-semibold transition-all ${
-                activeTab === "community"
+              className={`relative px-6 py-2.5 rounded-lg font-semibold transition-all ${activeTab === "community"
                   ? "bg-secondary text-secondary-foreground shadow-[0_0_20px_rgba(0,119,130,0.3)]"
                   : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted"
-              }`}
+                }`}
             >
               <Users className="h-4 w-4 mr-2 inline" />
               Community

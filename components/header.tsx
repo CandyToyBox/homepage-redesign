@@ -17,7 +17,7 @@ export function Header() {
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/images/icon.png" alt="WaveWarZ" width={36} height={36} className="rounded-lg" />
-              
+
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">

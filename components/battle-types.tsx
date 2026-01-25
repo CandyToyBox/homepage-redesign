@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 const battleTypes = [
   {
@@ -19,7 +20,7 @@ const battleTypes = [
     stats: "98 battles completed | $40K+ volume | $450+ to artists",
     primaryCta: "Watch Main Events",
     secondaryCta: "Apply as Artist",
-    image: "[PLACEHOLDER: 400x250 - Main battle showcase image]",
+    image: "/main-event.png",
   },
   {
     badge: "⚡ AUTOMATED BATTLES",
@@ -36,7 +37,7 @@ const battleTypes = [
     stats: "337+ Quick Battles | $80K+ volume | 240+ artists",
     primaryCta: "Explore Quick BattleZ",
     secondaryCta: "Add Your Music",
-    image: "[PLACEHOLDER: 400x250 - Quick battle interface mockup]",
+    image: "/quick-battlez.png",
   },
   {
     badge: "🎤 DIY BATTLES",
@@ -53,7 +54,7 @@ const battleTypes = [
     stats: "1000+ community battles | User-hosted tournaments",
     primaryCta: "Browse Community Battles",
     secondaryCta: "Host Your Battle",
-    image: "[PLACEHOLDER: 400x250 - Community battle showcase]",
+    image: "/community-battlez.png",
   },
 ]
 
@@ -74,9 +75,15 @@ export function BattleTypes() {
         <div className="grid md:grid-cols-3 gap-8">
           {battleTypes.map((battle, i) => (
             <div key={i} className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-              {/* Image Placeholder */}
-              <div className="h-48 bg-secondary/10 border-b border-border flex items-center justify-center text-sm text-muted-foreground p-4 text-center">
-                {battle.image}
+              {/* Battle Image */}
+              <div className="h-48 bg-secondary/10 border-b border-border relative overflow-hidden">
+                <Image
+                  src={battle.image}
+                  alt={battle.tagline}
+                  fill
+                  className="object-contain"
+                  priority={i === 0}
+                />
               </div>
 
               <div className="p-6 space-y-4">
