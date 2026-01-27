@@ -2,73 +2,58 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
 
 const battleTypes = [
   {
     badge: "🏆 MAIN BATTLES",
     tagline: "The Championship League",
-    when: "Sundays 7 PM EST",
+    when: "Sundays 7 PM EST + Daily X Spaces M-F 11 AM & 8:30 PM EST",
     format: [
       "Live-streamed performances",
       "3 rounds × 20 mins = 60 mins total",
-      "Professional judges + fan voting",
-      "High-stakes prize pools",
-      "Curated artist lineups",
+      "Judges + Charts + Fan voting",
+      "Professional production",
     ],
-    earnings: [
-      "Artists: 1% trading volume on your side ($12-$26 typically)",
-      "Winner bonus: 5% of losing pool",
-      "Loser bonus: 2% of losing pool",
-    ],
-    vibe: "The main event. Three rounds. Professional production. Real prize money. Think NBA Finals—but for musicians.",
-    stats: "Event volume: $1,200-$2,600 typically",
-    primaryCta: "Apply as Artist",
-    secondaryCta: "View Schedule",
-    image: "/main-event.png",
+    earnings: ["Artists: $200-400 per battle", "Traders: High stakes, entertainment value", "Sponsors: Featured placement"],
+    vibe: "The main event. Live-streamed. Judges picked. Artists signed up in advance. Think NBA Finals.",
+    stats: "98 battles completed | $40K+ volume | $450+ to artists",
+    primaryCta: "View Schedule →",
+    secondaryCta: "Sponsor a Battle →",
+    image: "[PLACEHOLDER: 400x250 - Main battle showcase image]",
   },
   {
     badge: "⚡ QUICK BATTLEZ",
     tagline: "The Fast League",
-    when: "24/7 Automated | Nightly 8:30 PM EST Live Space",
+    when: "Anytime, 24/7 | New battle every 30 mins (automated)",
     format: [
-      "30-minute automated battles",
+      "1 minute × 2 songs",
+      "Winner decided by charts + volume",
       "Auto-selected from Audius catalog",
-      "Algorithm + market decides winner",
-      "Constant action, lower stakes",
-      "Join our nightly space to trade live",
+      "Pure market mechanics",
     ],
-    earnings: [
-      "Artists: 1% trading volume ($2-$10 typically)",
-      "Winner bonus: 5% of losing pool",
-      "Loser bonus: 2% of losing pool",
-    ],
-    vibe: "Fast. Automated. Always on. Discovery boost: Your track gets featured in our nightly trading spaces.",
-    stats: "92+ battles | $190-$950 typical volume",
-    primaryCta: "Sync Your Audius Music",
-    secondaryCta: "Browse Artist Catalog",
-    image: "/quick-battlez.png",
+    earnings: ["Artists: $10-50 per battle", "Traders: Constant action, low stakes", "20+ artists in catalog"],
+    vibe: "Fast. Constant. Automated. Pure market. Like sports betting—always a game on.",
+    stats: "337+ Quick Battles | $80K+ volume | 240+ artists",
+    primaryCta: "Browse Catalog →",
+    secondaryCta: "Launch Quick Battle →",
+    image: "[PLACEHOLDER: 400x250 - Quick battle interface mockup]",
   },
   {
     badge: "🎤 COMMUNITY BATTLES",
     tagline: "The User League",
-    when: "Always live | User-hosted | Custom rules",
+    when: "Always live, any length | User-hosted tournaments | Custom rules",
     format: [
-      "Host your own tournament",
-      "Set your own duration",
-      "Invite specific artists",
-      "Build your own league",
+      "User-hosted, any duration",
+      "Artists play their own music",
+      "Traders vote with wallets",
+      "Build your audience",
     ],
-    earnings: [
-      "Artists: 1% trading fees on your side",
-      "Same settlement bonuses as other battles",
-      "Perfect for testing new music",
-    ],
-    vibe: "DIY. Your rules. Your artists. Community-driven discovery and fan building.",
-    stats: "User-hosted | Variable prize pools",
-    primaryCta: "Launch Community Battle",
-    secondaryCta: "",
-    image: "/community-battlez.png",
+    earnings: ["Artists: $20-100 per battle", "Traders: Support your favorites", "Creators: Build your league"],
+    vibe: "DIY. For everyone. Run it your way. Community-driven discovery.",
+    stats: "1000+ community battles | User-hosted tournaments",
+    primaryCta: "Launch Community Battle →",
+    secondaryCta: null,
+    image: "[PLACEHOLDER: 400x250 - Community battle showcase]",
   },
 ]
 
@@ -79,7 +64,7 @@ export function BattleTypes() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-balance">
-            Three Ways to Battle
+            Three Leagues. Pick Your Game.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Whether you're here for high-stakes showdowns, quick trades, or community tournaments—choose your battle type.
@@ -89,15 +74,9 @@ export function BattleTypes() {
         <div className="grid md:grid-cols-3 gap-8">
           {battleTypes.map((battle, i) => (
             <div key={i} className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-              {/* Battle Image */}
-              <div className="h-48 bg-secondary/10 border-b border-border relative overflow-hidden">
-                <Image
-                  src={battle.image}
-                  alt={battle.tagline}
-                  fill
-                  className="object-contain"
-                  priority={i === 0}
-                />
+              {/* Image Placeholder */}
+              <div className="h-48 bg-secondary/10 border-b border-border flex items-center justify-center text-sm text-muted-foreground p-4 text-center">
+                {battle.image}
               </div>
 
               <div className="p-6 space-y-4">

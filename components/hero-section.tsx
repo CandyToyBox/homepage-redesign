@@ -19,11 +19,11 @@ export function HeroSection() {
               <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl" />
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/wavewarz-logo.png"
+                  src="/images/wavewarz-20logo.png"
                   alt="WaveWarZ"
-                  width={400}
-                  height={200}
-                  className="w-72 sm:w-96 object-contain"
+                  width={256}
+                  height={256}
+                  className="w-48 h-48 sm:w-64 sm:h-64 object-contain"
                   priority
                 />
               </div>
@@ -35,69 +35,60 @@ export function HeroSection() {
               Music Battles That Pay.
               <br />
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Fans Trade The Outcome
+                Trade. Win. Repeat.
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Artists earn 1% of every trade on their music—paid per trade, not play.
-              Streaming pennies become SOL rewards.
+              Watch live music showdowns on Solana. Artists earn 1% of every trade. Traders speculate on songs. Only 1.5% fees total.
             </p>
           </div>
 
           {/* Stats Pills */}
-          <div className="flex flex-wrap justify-center gap-6 pt-2">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-black text-primary">$40K</div>
-              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Trading Volume</div>
+          <div className="flex flex-wrap justify-center gap-3 pt-2">
+            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
+              💰 $2,500+ per match
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-black text-primary">371</div>
-              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Battles Completed</div>
+            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
+              🎤 60% Artists earning
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-black text-primary">50%</div>
-              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Downside Protection</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-black text-primary">INSTANT</div>
-              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">SOL Payouts</div>
+            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
+              📊 337 Battles completed
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link href="#tabs-section">
+            <Link href="/quick-battles">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(94,234,128,0.4)] font-bold px-8 py-6 h-auto"
               >
+                <Zap className="h-5 w-5 mr-2" />
                 Watch Live Battle →
               </Button>
             </Link>
-            <Link href="#wallet-connect">
+            <Link href="#how-it-works">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-border text-foreground hover:bg-card bg-transparent font-semibold px-8 py-6 h-auto"
               >
-                Connect Wallet & Trade →
+                See How It Works ↓
               </Button>
             </Link>
           </div>
 
           <div className="text-sm text-muted-foreground pt-2">
-            No KYC • No Middlemen • Instant Payouts
+            No wallet needed
           </div>
 
           {/* Live indicator */}
-          <Link href="#tabs-section">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mt-4 cursor-pointer hover:bg-primary/20 transition-colors group">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-              </span>
-              <span className="text-sm font-medium text-primary group-hover:underline">Battles happening now</span>
-            </div>
-          </Link>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mt-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+            </span>
+            <span className="text-sm font-medium text-primary">Battles happening now</span>
+          </div>
         </div>
       </div>
     </section>

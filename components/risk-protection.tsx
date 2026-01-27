@@ -10,122 +10,104 @@ export function RiskProtection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-balance">
-            Three Layers of Protection.<br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Zero Rug Pulls.</span>
+            Trade with a Safety Net:<br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">50% Back on Every Battle</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Unlike other platforms where you lose everything, WaveWarz battles resolve in minutes with mandatory protection.
-            Losing side retains 50% of their pool.
+            Unlike pump.fun where you lose everything, or Polymarket where you wait months,
+            WaveWarz battles resolve in minutes with built-in downside protection.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Protection Card 1 */}
-          <div className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-colors">
-            <div className="text-4xl mb-6">🤝</div>
-            <h3 className="text-xl font-bold text-foreground mb-4">50% Downside Protection</h3>
-            <p className="text-sm text-muted-foreground mb-6">
-              Lose a battle? Get 50% of your stake back automatically. No bag-holding worthless tokens. Real SOL returned instantly.
-            </p>
-            <div className="p-4 bg-primary/10 rounded-lg border border-primary/20 text-xs">
-              <p className="font-bold text-primary mb-2">Example:</p>
-              <p className="text-foreground">Stake: 1 SOL</p>
-              <p className="text-foreground">Your side loses</p>
-              <p className="text-primary font-bold mt-2">You receive: 0.5 SOL back</p>
-            </div>
-          </div>
-
-          {/* Protection Card 2 */}
-          <div className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-colors">
-            <div className="text-4xl mb-6">⚡</div>
-            <h3 className="text-xl font-bold text-foreground mb-4">Smart Contract Settlement</h3>
-            <p className="text-sm text-muted-foreground mb-6">
-              All payouts handled by Solana smart contract. No human intervention possible. Fully automated, instant, and auditable onchain.
-            </p>
-            <Link href="#">
-              <Button variant="outline" size="sm" className="w-full">
-                View Contract on Solana Explorer →
-              </Button>
-            </Link>
-          </div>
-
-          {/* Protection Card 3 */}
-          <div className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-colors">
-            <div className="text-4xl mb-6">💎</div>
-            <h3 className="text-xl font-bold text-foreground mb-4">SOL Payouts Only</h3>
-            <p className="text-sm text-muted-foreground mb-6">
-              No volatile battle tokens to dump. Get paid in SOL (real money). No liquidity issues, no "exit tax", and no delays.
-            </p>
-            <div className="p-4 bg-muted/30 rounded-lg border border-border text-xs">
-              <p className="font-bold text-foreground mb-1">Withdraw Instantly</p>
-              <p className="text-muted-foreground">All earnings are real-time and liquid immediately after battle settlement.</p>
-            </div>
+        {/* Comparison Table - PLACEHOLDER */}
+        <div className="mb-12 bg-card border border-border rounded-lg overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-secondary/10">
+                <tr>
+                  <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
+                  <th className="px-6 py-4 text-center font-semibold text-foreground">pump.fun</th>
+                  <th className="px-6 py-4 text-center font-semibold text-foreground">Polymarket</th>
+                  <th className="px-6 py-4 text-center font-semibold text-primary">WaveWarz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t border-border">
+                  <td className="px-6 py-4 font-medium text-foreground">Loss Risk</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">100% loss</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">100% loss</td>
+                  <td className="px-6 py-4 text-center text-primary font-semibold">50% back</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="px-6 py-4 font-medium text-foreground">Settlement</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Hope for buyers</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Weeks to months</td>
+                  <td className="px-6 py-4 text-center text-primary font-semibold">Minutes</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="px-6 py-4 font-medium text-foreground">Payout Token</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Volatile bags</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">USDC</td>
+                  <td className="px-6 py-4 text-center text-primary font-semibold">SOL</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="px-6 py-4 font-medium text-foreground">Entertainment</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">None</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Boring news</td>
+                  <td className="px-6 py-4 text-center text-primary font-semibold">Live battles</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        {/* Fee Structure Section */}
-        <div className="mt-24 p-8 md:p-12 bg-card border border-border rounded-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4">
-            <span className="text-[10px] font-black tracking-widest text-primary/40 uppercase">Economic Transparency</span>
-          </div>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-black text-foreground mb-4">Fair Split. No Hidden Fees.</h3>
-            <p className="text-muted-foreground">Total platform fee: 1.5% of trading volume. Here's exactly where it goes.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold text-foreground">Every $100 Traded on WaveWarz:</h4>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">$1.00</div>
-                  <div>
-                    <p className="font-bold text-foreground">Artist on that side (1%)</p>
-                    <p className="text-xs text-muted-foreground">Paid per trade, not per play.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary">$0.50</div>
-                  <div>
-                    <p className="font-bold text-foreground">Platform operations (0.5%)</p>
-                    <p className="text-xs text-muted-foreground">Maintains 24/7 automated engines.</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-muted/20 flex items-center justify-center font-bold text-muted-foreground">$98.50</div>
-                  <div>
-                    <p className="font-bold text-foreground">Prize pools</p>
-                    <p className="text-xs text-muted-foreground">Traders compete for this based on battle outcome.</p>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Math Box */}
+          <div className="bg-card border border-border rounded-lg p-8">
+            <h3 className="text-xl font-bold text-foreground mb-6">How 50% Back Works</h3>
+            <div className="space-y-4 text-foreground mb-6">
+              <div className="flex justify-between border-b border-border pb-3">
+                <span className="text-muted-foreground">You Stake:</span>
+                <span className="font-semibold">1 SOL</span>
+              </div>
+              <div className="flex justify-between border-b border-border pb-3">
+                <span className="text-muted-foreground">Your Pick:</span>
+                <span className="font-semibold">Artist A</span>
+              </div>
+              <div className="flex justify-between border-b border-border pb-3">
+                <span className="text-muted-foreground">Winner:</span>
+                <span className="font-semibold">Artist B</span>
+              </div>
+              <div className="flex justify-between border-b border-border pb-3">
+                <span className="text-muted-foreground">You Receive:</span>
+                <span className="font-semibold text-primary">0.5 SOL back</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Max Loss:</span>
+                <span className="font-semibold text-primary">50% per battle</span>
               </div>
             </div>
+            <p className="text-sm text-muted-foreground italic">
+              All payouts automatic. All on-chain. All SOL.
+            </p>
+          </div>
 
-            <div className="p-6 bg-background border border-border rounded-xl">
-              <h4 className="font-bold text-foreground mb-4">At battle end, loser's pool is split:</h4>
-              <ul className="space-y-3">
-                <li className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Returned to losing traders (protection)</span>
-                  <span className="font-bold text-primary">50%</span>
-                </li>
-                <li className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Winning traders (prize money)</span>
-                  <span className="font-bold text-foreground">40%</span>
-                </li>
-                <li className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Winning artist (bonus)</span>
-                  <span className="font-bold text-foreground">5%</span>
-                </li>
-                <li className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Losing artist (bonus)</span>
-                  <span className="font-bold text-foreground">2%</span>
-                </li>
-                <li className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Platform (bonus)</span>
-                  <span className="font-bold text-foreground">3%</span>
-                </li>
-              </ul>
-            </div>
+          {/* Benefits Grid - PLACEHOLDER for icons */}
+          <div className="space-y-4">
+            {[
+              { title: "No Worthless Bags", desc: "All payouts in SOL, not volatile tokens", icon: "💼" },
+              { title: "Instant Settlement", desc: "Battles end in 1-60 minutes, payouts automatic", icon: "⚡" },
+              { title: "Transparent Math", desc: "On-chain smart contracts, view on Solana Explorer", icon: "🔍" },
+              { title: "Entertainment Value", desc: "Watch live performances while you trade", icon: "🎭" },
+            ].map((benefit, i) => (
+              <div key={i} className="flex gap-4 p-4 rounded-lg bg-card/50 border border-border/50">
+                <div className="text-2xl flex-shrink-0">{benefit.icon}</div>
+                <div>
+                  <h4 className="font-semibold text-foreground">{benefit.title}</h4>
+                  <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

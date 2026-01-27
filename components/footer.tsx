@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Youtube, Twitter, MessageCircle, FileText, BookOpen, Heart, Handshake, Instagram, Linkedin, Send, Radio } from "lucide-react"
+import { Youtube, Twitter, MessageCircle, FileText, BookOpen, Heart, Handshake } from "lucide-react"
 
 const footerLinks = {
   product: [
@@ -12,8 +12,7 @@ const footerLinks = {
   resources: [
     { label: "Whitepaper", href: "/whitepaper", icon: FileText },
     { label: "Documentation", href: "/docs", icon: BookOpen },
-    { label: "SOLScan Program", href: "https://solscan.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo?cluster=mainnet" },
-    { label: "Historical Data", href: "https://orbmarkets.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo/history" },
+    { label: "How It Works", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
   ],
   community: [
@@ -26,14 +25,8 @@ const footerLinks = {
 
 const socials = [
   { label: "YouTube", href: "https://youtube.com/@WaveWarZ", icon: Youtube },
-  { label: "X", href: "https://x.com/WaveWarZ", icon: Twitter },
-  { label: "Twitch", href: "https://www.twitch.tv/wavewarzofficial", icon: Radio },
-  { label: "Discord", href: "https://discord.com/invite/bktETHgsKh", icon: MessageCircle },
-  { label: "Telegram", href: "https://t.me/wavewarz", icon: Send },
-  { label: "Instagram", href: "https://instagram.com/wavewarz", icon: Instagram },
-  { label: "TikTok", href: "https://www.tiktok.com/@wavewarzofficial", icon: Youtube },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/wave-warz/", icon: Linkedin },
-  { label: "Farcaster", href: "https://farcaster.xyz/wavewarz", icon: MessageCircle },
+  { label: "Twitter", href: "https://twitter.com/WaveWarZ", icon: Twitter },
+  { label: "Discord", href: "https://discord.gg/wavewarz", icon: MessageCircle },
 ]
 
 export function Footer() {
@@ -54,16 +47,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Musicians finally get paid fairly for their music. Traders support artists AND earn SOL.
+              The music battle game where fans compete and artists earn. Pick your favorite, win real prizes.
             </p>
-            <a
-              href="https://solscan.io/account/wavewarz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
-            >
-              Built on Solana →
-            </a>
             <div className="flex items-center gap-3">
               {socials.map((social) => (
                 <a

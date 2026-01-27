@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -18,28 +15,6 @@ interface FeaturedBattleProps {
 }
 
 export function FeaturedBattle({ battle }: FeaturedBattleProps) {
-  const [timeRemaining, setTimeRemaining] = useState<string>("")
-
-  useEffect(() => {
-    if (!battle?.endsAt) return
-
-    const updateTime = () => {
-      const diff = new Date(battle.endsAt).getTime() - Date.now()
-      if (diff <= 0) {
-        setTimeRemaining("Ended")
-        return
-      }
-      const hours = Math.floor(diff / (1000 * 60 * 60))
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-      setTimeRemaining(`${hours}h ${minutes}m`)
-    }
-
-    updateTime()
-    const interval = setInterval(updateTime, 60000) // Update every minute
-
-    return () => clearInterval(interval)
-  }, [battle?.endsAt])
-
   if (!battle) {
     return (
       <section className="py-20">
@@ -52,6 +27,13 @@ export function FeaturedBattle({ battle }: FeaturedBattleProps) {
         </div>
       </section>
     )
+  }
+
+  const formatTimeRemaining = (endsAt: string) => {
+    const diff = new Date(endsAt).getTime() - Date.now()
+    const hours = Math.floor(diff / (1000 * 60 * 60))
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+    return `${hours}h ${minutes}m`
   }
 
   return (
@@ -93,7 +75,7 @@ export function FeaturedBattle({ battle }: FeaturedBattleProps) {
                   </span>
                   <span className="flex items-center gap-1.5 text-muted-foreground">
                     <Clock className="h-4 w-4" />
-                    {timeRemaining ? `Ends in ${timeRemaining}` : "Loading..."}
+                    Ends in {formatTimeRemaining(battle.endsAt)}
                   </span>
                 </div>
 

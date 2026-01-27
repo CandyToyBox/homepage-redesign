@@ -27,8 +27,8 @@ import { SocialProof } from "@/components/social-proof"
 import { ArtistMonetization } from "@/components/artist-monetization"
 import { EconomicsTransparency } from "@/components/economics-transparency"
 import { TeamSection } from "@/components/team-section"
+import { ContentCommunity } from "@/components/content-community"
 import { ArtistCatalog } from "@/components/artist-catalog"
-import { CommunitySpaces } from "@/components/community-spaces"
 
 // Mock data - replace with real API calls
 const mockFeaturedBattle = {
@@ -141,44 +141,56 @@ export default function Home() {
         {/* 1. ABOVE THE FOLD: Hook + CTAs */}
         <HeroSection />
         <TrustBadges />
-
-        {/* 2. LIVE INTERACTION: CTA + Product */}
+        
+        {/* 2. IMMEDIATE ACTION: Livestream + Quick Battles */}
         <LivestreamCTA />
-        <div id="tabs-section">
-          <TabsSection
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            quickActive={mockQuickActive}
-            quickQueued={mockQuickQueued}
-            activeCommunityBattles={mockActiveCommunityBattles}
-          />
-        </div>
+        <TabsSection
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          quickActive={mockQuickActive}
+          quickQueued={mockQuickQueued}
+          activeCommunityBattles={mockActiveCommunityBattles}
+        />
 
-        {/* 3. TALENT POOL: Audius Onboarding & Catalog */}
-        <ArtistCatalog />
-
-        {/* 4. COMMUNITY: Connect with others */}
-        <CommunitySpaces />
-
-        {/* 5. VALUE: Why artists and traders care */}
-        <ArtistMonetization />
-
-        {/* 6. PHILOSOPHY: Competition drives quality */}
+        {/* 3. EDUCATE: What is this? */}
         <WhatIsWaveWarz />
 
-        {/* 7. TRANSPARENCY & RISK: Technical safety */}
-        <EconomicsTransparency />
+        {/* 4. RISK MANAGEMENT: Safety net message */}
         <RiskProtection />
 
-        {/* 8. SOCIAL PROOF & DISCOVERY */}
+        {/* 5. SHOW OPTIONS: Three battle types */}
+        <BattleTypes />
+
+        {/* 6. HOW TO START: Beginner steps */}
+        <HowItWorks />
+
+        {/* 7. SOCIAL PROOF: Real people + stats */}
         <SocialProof />
-        <StatsSection />
+
+        {/* 8. MONETIZATION: Why artists care */}
+        <ArtistMonetization />
+
+        {/* 9. ECONOMICS: Transparency */}
+        <EconomicsTransparency />
+
+        {/* 10. ARTIST CATALOG: Browse & battle */}
+        <ArtistCatalog />
+
+        {/* 11. COMMUNITY: More than battles */}
+        <ContentCommunity />
+
+        {/* 12. VALUES: Charity + Sponsors */}
+        <CharityHighlight />
+        <SponsorsSection />
+
+        {/* 13. TEAM: Who's building */}
+        <TeamSection />
+
+        {/* 14. DISCOVERY: Past battles */}
         <FeaturedBattle battle={mockFeaturedBattle} />
         <PastBattles battles={mockPastBattles} />
 
-        {/* 9. EDUCATION & TEAM */}
-        <HowItWorks />
-        <TeamSection />
+        {/* 15. TRUST: Video + FAQ */}
         <YoutubeEmbed />
         <FAQSection />
       </main>

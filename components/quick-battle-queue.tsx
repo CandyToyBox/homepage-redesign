@@ -57,19 +57,18 @@ export function QuickBattleQueue({ queued }: QuickBattleQueueProps) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h3 className="text-xl font-bold text-foreground">Upcoming Quick BattleZ</h3>
-          <p className="text-sm text-muted-foreground mt-1">
-            Anyone can launch a battle. Payouts go to the artist's wallet immediately.
+          <p className="text-sm text-muted-foreground mt-1 flex items-center gap-1">
+            <Info className="h-3 w-3" />
+            On-chain transactions · Small gas fees apply
           </p>
         </div>
 
         <div className="flex items-center gap-2">
-          <Link href="/audius/search">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(94,255,130,0.3)]">
-              <Rocket className="h-4 w-4 mr-2" />
-              Launch Your Own Battle
-            </Button>
-          </Link>
-          <Link href="/quick-battles" className="text-sm text-muted-foreground hover:text-foreground transition-colors px-2">
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(94,255,130,0.3)]">
+            <Rocket className="h-4 w-4 mr-2" />
+            Launch Next Battle
+          </Button>
+          <Link href="/quick-battles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             View all
           </Link>
         </div>

@@ -5,31 +5,31 @@ const steps = [
     icon: Download,
     step: 1,
     title: "Get a Wallet",
-    description: "Download Phantom (free). Like Apple Pay for crypto.",
+    description: "Download Phantom (free, 2 min). Like Apple Pay for crypto.",
   },
   {
     icon: CreditCard,
     step: 2,
     title: "Add Funds",
-    description: "Buy SOL with debit card. Start with as little as $5.",
+    description: "Buy SOL with your debit card. Start with $5.",
   },
   {
     icon: Search,
     step: 3,
     title: "Find a Battle",
-    description: "Browse Quick BattleZ, Main Events, or Community Battles.",
+    description: "Browse matchups or search artists. See odds and prizes.",
   },
   {
     icon: Heart,
     step: 4,
     title: "Pick Your Side",
-    description: "Stake SOL on your artist. 50% downside protection if you lose.",
+    description: "Choose your artist and amount. See potential payout first.",
   },
   {
     icon: Gift,
     step: 5,
     title: "Collect Winnings",
-    description: "SOL hits your wallet instantly. Withdraw anytime.",
+    description: "Won? Prize hits your wallet instantly. Withdraw anytime.",
   },
 ]
 

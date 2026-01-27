@@ -4,165 +4,109 @@ import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const musicianFaqs = [
+const faqs = [
   {
-    question: "How do I actually get paid?",
+    question: "Do I need to know anything about crypto to use WaveWarZ?",
     answer:
-      "Two ways, automatically: (1) DURING THE BATTLE: Fans trade on your side and you earn 1% of that volume continuously, no matter who wins. (2) WHEN BATTLE ENDS: Smart contract calculates settlement bonuses. Winner gets 5% of loser's pool, loser gets 2%. All paid instantly in SOL to your wallet.",
+      "Nope! If you can download an app and use Apple Pay or Venmo, you can use WaveWarZ. We've designed everything to feel familiar. The 'crypto' part happens in the background - you just pick artists and win prizes.",
   },
   {
-    question: "What if my fans don't trade much?",
+    question: "What's a wallet and why do I need one?",
     answer:
-      "Then you don't earn much from that specific battle. But more battles = more chances. Quick BattleZ run 24/7. Think of it like streaming: consistent catalog + engaged fans = real income. WaveWarz pays 300x better per 'play' than Spotify.",
+      "A wallet is like a secure digital pocket for your money - similar to Apple Pay or PayPal, but you control it completely. We recommend Phantom (free app). It stores your funds and lets you participate in battles. Download it, set a password, and you're ready.",
   },
   {
-    question: "How does this compare to Spotify?",
+    question: "What is SOL and how do I get it?",
     answer:
-      "Quick Battle ($10 earned) = 3,300 Spotify streams. Main Event ($25 earned) = 8,300 Spotify streams. WaveWarz offers 300x higher per-play value, instant SOL payouts, and you keep 100% of your rights. Use Spotify for discovery, Battle on WaveWarz for income.",
+      "SOL is the digital currency WaveWarZ uses - think of it like arcade tokens or chips at a casino. You can buy SOL directly in your Phantom wallet using a regular debit or credit card. $5-10 is plenty to start exploring.",
   },
   {
-    question: "How do I get my music into Quick BattleZ?",
+    question: "How much money do I need to start?",
     answer:
-      "Step 1: Upload to Audius (audius.co). Step 2: Connect to WaveWarz and click 'Sync Audius Music'. Step 3: Authorize the sync. Your music automatically enters the Quick Battle rotation. No application or approval process needed.",
+      "You can join battles with as little as $1 worth of SOL. We recommend starting small ($5-10) while you learn how it works. Transaction fees are tiny - usually less than a penny.",
   },
   {
-    question: "What if I don't have a Solana wallet?",
+    question: "Can I lose money?",
     answer:
-      "Setup takes 2 minutes: Download Phantom wallet (free), create your wallet (save your seed phrase!), and we'll send earnings there. You can cash out SOL to USD anytime via Coinbase or other exchanges.",
-  },
-]
-
-const traderFaqs = [
-  {
-    question: "What if I pick the losing side?",
-    answer:
-      "You get 50% downside protection automatically. If you stake 1 SOL and lose, you receive 0.5 SOL back instantly. No total wipeouts like other platforms.",
+      "Yes - just like betting on sports or playing poker, you can lose what you put in. If your artist loses the battle, you lose your entry. That's why we say: only play with money you're okay losing. Start small, have fun, and treat it as entertainment.",
   },
   {
-    question: "How do I know which artist will win?",
+    question: "How do I actually win?",
     answer:
-      "The winner is whichever side has more SOL in their pool when time expires. You can use strategy: check artist stats, volume trends, and community sentiment. Early trades often get better prices on the bonding curve.",
+      "Pick the artist you think will get more support. If more people (and more money) back your artist by the time the battle ends, you win! Your prize is a share of what the losing side put in. The earlier you join and the more you put in, the bigger your share.",
   },
   {
-    question: "Can I withdraw during a battle?",
+    question: "What's the difference between Quick BattleZ and Community Battles?",
     answer:
-      "No, but battles are quick: 30-60 minutes. Once the battle settles (usually 1 minute after it ends), your SOL is instantly available in your wallet for withdrawal or next trade.",
+      "Quick BattleZ are fast (just a few minutes), have smaller stakes, and are perfect for beginners. Community Battles last longer (hours or days), have bigger prize pools, and are created by users like you. Start with Quick BattleZ to learn the ropes.",
   },
   {
-    question: "What's the minimum stake?",
+    question: "How do I get my winnings back to my bank account?",
     answer:
-      "Start small: Minimum is 0.01 SOL (~$2-3). We recommend 0.1-0.5 SOL for your first few battles to learn the flow and test the 50% downside protection.",
+      "Your winnings appear as SOL in your wallet. To convert to regular money, you can sell SOL in your Phantom wallet and withdraw to your bank - similar to cashing out on Venmo. The whole process takes a few minutes.",
   },
   {
-    question: "Is this gambling?",
+    question: "Is this legal? Is my money safe?",
     answer:
-      "It's speculation with real stakes and real protection. You're supporting real artists and the 50% downside protection limits your risk. Every stake directly funds the musician you're backing.",
+      "WaveWarZ operates on public blockchain technology, meaning all transactions are transparent and verifiable. Your wallet is controlled only by you - we can't access your funds. As for legality, it varies by location. Please check your local regulations regarding prediction markets.",
+  },
+  {
+    question: "What if I pick the wrong artist?",
+    answer:
+      "You can sell your position anytime before the battle ends! If you change your mind or see the odds shifting, just sell and get (some of) your money back. You're never locked in until the battle concludes.",
   },
 ]
 
 export function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<string | null>("musician-0")
-
-  const handleToggle = (id: string) => {
-    setOpenIndex(openIndex === id ? null : id)
-  }
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
     <section id="faq" className="py-24 px-4 bg-card/50" aria-labelledby="faq-heading">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <header className="text-center mb-16">
           <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Common <span className="text-primary">Questions</span>
+            Common <span className="text-neon">Questions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything musicians and traders need to know.
+            New to this? We get it. Here are the answers to everything beginners ask.
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Musicians FAQ */}
-          <div>
-            <h3 className="text-xl font-bold text-primary mb-6">For Musicians</h3>
-            <dl className="space-y-4">
-              {musicianFaqs.map((faq, index) => {
-                const id = `musician-${index}`
-                return (
-                  <div key={id} className="border border-border rounded-lg overflow-hidden bg-background">
-                    <dt>
-                      <button
-                        onClick={() => handleToggle(id)}
-                        className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-card/50 transition-colors"
-                        aria-expanded={openIndex === id}
-                        aria-controls={`faq-answer-${id}`}
-                      >
-                        <span className="font-medium text-foreground pr-4 text-sm">{faq.question}</span>
-                        <ChevronDown
-                          className={cn(
-                            "w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200",
-                            openIndex === id && "rotate-180",
-                          )}
-                          aria-hidden="true"
-                        />
-                      </button>
-                    </dt>
-                    <dd
-                      id={`faq-answer-${id}`}
-                      className={cn(
-                        "overflow-hidden transition-all duration-200",
-                        openIndex === id ? "max-h-96" : "max-h-0",
-                      )}
-                    >
-                      <p className="px-5 pb-4 text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </dd>
-                  </div>
-                )
-              })}
-            </dl>
-          </div>
+        <dl className="space-y-5">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-border rounded-lg overflow-hidden bg-background">
+              <dt>
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-card/50 transition-colors"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <span className="font-medium text-foreground pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={cn(
+                      "w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-200",
+                      openIndex === index && "rotate-180",
+                    )}
+                    aria-hidden="true"
+                  />
+                </button>
+              </dt>
+              <dd
+                id={`faq-answer-${index}`}
+                className={cn(
+                  "overflow-hidden transition-all duration-200",
+                  openIndex === index ? "max-h-96" : "max-h-0",
+                )}
+              >
+                <p className="px-6 pb-5 text-muted-foreground leading-relaxed">{faq.answer}</p>
+              </dd>
+            </div>
+          ))}
+        </dl>
 
-          {/* Traders FAQ */}
-          <div>
-            <h3 className="text-xl font-bold text-secondary mb-6">For Traders</h3>
-            <dl className="space-y-4">
-              {traderFaqs.map((faq, index) => {
-                const id = `trader-${index}`
-                return (
-                  <div key={id} className="border border-border rounded-lg overflow-hidden bg-background">
-                    <dt>
-                      <button
-                        onClick={() => handleToggle(id)}
-                        className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-card/50 transition-colors"
-                        aria-expanded={openIndex === id}
-                        aria-controls={`faq-answer-${id}`}
-                      >
-                        <span className="font-medium text-foreground pr-4 text-sm">{faq.question}</span>
-                        <ChevronDown
-                          className={cn(
-                            "w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200",
-                            openIndex === id && "rotate-180",
-                          )}
-                          aria-hidden="true"
-                        />
-                      </button>
-                    </dt>
-                    <dd
-                      id={`faq-answer-${id}`}
-                      className={cn(
-                        "overflow-hidden transition-all duration-200",
-                        openIndex === id ? "max-h-96" : "max-h-0",
-                      )}
-                    >
-                      <p className="px-5 pb-4 text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </dd>
-                  </div>
-                )
-              })}
-            </dl>
-          </div>
-        </div>
-
-        <div className="mt-12 p-8 rounded-xl bg-primary/10 border border-primary/30 text-center">
-          <p className="text-foreground font-medium mb-3">Still have questions?</p>
+        <div className="mt-12 p-8 rounded-xl bg-neon/10 border border-neon/30 text-center">
+          <p className="text-foreground font-medium mb-3">Still confused? That&apos;s okay!</p>
           <p className="text-muted-foreground">
             Join our Discord community where thousands of members help newcomers every day.
           </p>
