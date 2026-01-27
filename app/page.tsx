@@ -142,7 +142,10 @@ export default function Home() {
         <HeroSection />
         <TrustBadges />
 
-        {/* 2. LIVE INTERACTION: CTA + Product */}
+        {/* 2. DISCOVERY: Three Ways to Battle */}
+        <BattleTypes />
+
+        {/* 3. LIVE INTERACTION: CTA + Product */}
         <LivestreamCTA />
         <div id="tabs-section">
           <TabsSection
@@ -154,29 +157,33 @@ export default function Home() {
           />
         </div>
 
-        {/* 3. TALENT POOL: Audius Onboarding & Catalog */}
+        {/* 4. TALENT POOL: Audius Onboarding & Catalog */}
         <ArtistCatalog />
 
-        {/* 4. COMMUNITY: Connect with others */}
+        {/* 5. COMMUNITY: Connect with others */}
         <CommunitySpaces />
 
-        {/* 5. VALUE: Why artists and traders care */}
+        {/* 6. VALUE: Redesigned Monetization & Economics */}
         <ArtistMonetization />
 
-        {/* 6. PHILOSOPHY: Competition drives quality */}
+        {/* 7. PHILOSOPHY: Competition drives quality */}
         <WhatIsWaveWarz />
 
-        {/* 7. TRANSPARENCY & RISK: Technical safety */}
+        {/* 8. IMPACT & PARTNERSHIPS */}
+        <CharityHighlight />
+        <SponsorsSection />
+
+        {/* 9. TRANSPARENCY & RISK: Technical safety */}
         <EconomicsTransparency />
         <RiskProtection />
 
-        {/* 8. SOCIAL PROOF & DISCOVERY */}
+        {/* 10. SOCIAL PROOF & DISCOVERY */}
         <SocialProof />
         <StatsSection />
         <FeaturedBattle battle={mockFeaturedBattle} />
         <PastBattles battles={mockPastBattles} />
 
-        {/* 9. EDUCATION & TEAM */}
+        {/* 11. EDUCATION & TEAM */}
         <HowItWorks />
         <TeamSection />
         <YoutubeEmbed />

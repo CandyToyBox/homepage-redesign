@@ -22,40 +22,49 @@ const sponsorBenefits = [
 
 export function SponsorsSection() {
   return (
-    <section className="py-16 px-4 bg-card/30" aria-labelledby="sponsors">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-4">
-          <Handshake className="h-3 w-3 text-secondary" />
-          <span className="text-xs font-semibold text-secondary">Partnerships</span>
-        </div>
-        <h2 id="sponsors" className="text-2xl font-bold text-foreground mb-3">
-          Sponsor WaveWarZ
-        </h2>
-        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-          Reach engaged music fans during live battles. Brand exposure, battle naming rights, and community integration.
-        </p>
+    <section className="py-24 bg-[#030305] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="bg-[#0A0B10] border border-white/5 rounded-[3rem] p-8 lg:p-16 relative overflow-hidden group">
+          {/* Ambient Glow */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
-        {/* Sponsor slots */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="px-8 py-4 rounded-xl bg-card border border-dashed border-border text-muted-foreground text-sm"
-            >
-              Your Brand Here
+          <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+                <span className="text-[10px] font-black text-secondary tracking-widest uppercase">Partnerships</span>
+              </div>
+
+              <h2 className="text-4xl lg:text-5xl font-black text-foreground mb-6 uppercase tracking-tight leading-tight">
+                Sponsor WaveWarZ
+              </h2>
+
+              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
+                Get your brand in front of thousands of music fans, artists, and traders.
+                Sponsor a battle, a tournament, or the entire league.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link href="/sponsors/apply">
+                  <Button className="h-14 px-8 bg-secondary text-white hover:bg-secondary/90 font-black uppercase tracking-widest rounded-2xl transition-all active:scale-95 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                    Become a Sponsor
+                  </Button>
+                </Link>
+                <Link href="/media-kit">
+                  <Button variant="ghost" className="h-14 px-8 text-foreground font-black uppercase tracking-widest hover:bg-white/5 rounded-2xl transition-all">
+                    View Media Kit
+                  </Button>
+                </Link>
+              </div>
             </div>
-          ))}
-        </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link href="/sponsors/apply">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90">Become a Sponsor</Button>
-          </Link>
-          <Link href="/sponsors/media-kit">
-            <Button variant="outline" className="border-border text-foreground hover:bg-card bg-transparent">
-              Media Kit
-            </Button>
-          </Link>
+            <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-32 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-help group/logo">
+                  <span className="text-[10px] font-black text-muted-foreground uppercase tracking-widest group-hover/logo:text-secondary">Brand Slot {i}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
