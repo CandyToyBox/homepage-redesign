@@ -23,7 +23,7 @@ const steps = [
     icon: Heart,
     step: 4,
     title: "Pick Your Side",
-    description: "Stake SOL on your artist. 50% back if you lose.",
+    description: "Stake SOL on your artist. 50% downside protection if you lose.",
   },
   {
     icon: Gift,

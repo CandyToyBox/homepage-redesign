@@ -35,60 +35,69 @@ export function HeroSection() {
               Music Battles That Pay.
               <br />
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Trade. Win. Repeat.
+                Fans Trade The Outcome
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Artists earn 1% of every trade on their music—paid per trade, not play. Streaming pennies become SOL rewards.
+              Artists earn 1% of every trade on their music—paid per trade, not play.
+              Streaming pennies become SOL rewards.
             </p>
           </div>
 
           {/* Stats Pills */}
-          <div className="flex flex-wrap justify-center gap-3 pt-2">
-            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
-              ✓ Built on Solana Mainnet
+          <div className="flex flex-wrap justify-center gap-6 pt-2">
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-primary">$40K</div>
+              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Trading Volume</div>
             </div>
-            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
-              ✓ Artists Earn 1% Per Trade
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-primary">371</div>
+              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Battles Completed</div>
             </div>
-            <div className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground">
-              ✓ Instant SOL Payouts
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-primary">50%</div>
+              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Downside Protection</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-primary">INSTANT</div>
+              <div className="text-xs font-bold text-muted-foreground uppercase tracking-wider">SOL Payouts</div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link href="/quick-battles">
+            <Link href="#tabs-section">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(94,234,128,0.4)] font-bold px-8 py-6 h-auto"
               >
-                <Zap className="h-5 w-5 mr-2" />
                 Watch Live Battle →
               </Button>
             </Link>
-            <Link href="#how-it-works">
+            <Link href="#wallet-connect">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-border text-foreground hover:bg-card bg-transparent font-semibold px-8 py-6 h-auto"
               >
-                See How It Works ↓
+                Connect Wallet & Trade →
               </Button>
             </Link>
           </div>
 
           <div className="text-sm text-muted-foreground pt-2">
-            No wallet needed
+            No KYC • No Middlemen • Instant Payouts
           </div>
 
           {/* Live indicator */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mt-4">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-            </span>
-            <span className="text-sm font-medium text-primary">Battles happening now</span>
-          </div>
+          <Link href="#tabs-section">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mt-4 cursor-pointer hover:bg-primary/20 transition-colors group">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+              </span>
+              <span className="text-sm font-medium text-primary group-hover:underline">Battles happening now</span>
+            </div>
+          </Link>
         </div>
       </div>
     </section>

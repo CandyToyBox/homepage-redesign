@@ -58,6 +58,7 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <Button
+              id="wallet-connect"
               onClick={() => setIsConnected(!isConnected)}
               className={
                 isConnected

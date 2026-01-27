@@ -10,116 +10,177 @@ export function ArtistMonetization() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-balance">
-            Musicians Finally
+            Get Paid Like Athletes,
             <br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Get Paid</span>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Not Like Streamers</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            WaveWarz fundamentally changes how musicians earn from their work. Not per-stream. Not per-play. Per-trade. Instantly.
+            Streaming pays fractions of a penny. WaveWarz pays you from trading volume. Here's the real math.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Spotify Economics */}
-          <div className="bg-card border border-border rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Spotify Economics</h3>
-            <div className="space-y-4 mb-8">
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">10,000 streams</span>
-                <span className="text-muted-foreground">= $30-50</span>
-              </div>
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">100,000 streams</span>
-                <span className="text-muted-foreground">= $300-500</span>
-              </div>
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">1,000,000 streams</span>
-                <span className="text-muted-foreground">= $3,000-5,000</span>
-              </div>
-              <div className="pt-4 space-y-2">
-                <p className="text-sm text-foreground">
-                  <span className="font-semibold">You get:</span> $0.003-0.005 per stream
-                </p>
-                <p className="text-sm text-foreground">
-                  <span className="font-semibold">Time to earn:</span> Months to years
-                </p>
-              </div>
-            </div>
+        {/* What $10 in Artist Earnings Actually Means */}
+        <div className="mb-16 bg-card border border-border rounded-lg overflow-hidden">
+          <div className="p-6 border-b border-border bg-muted/30 text-center">
+            <h3 className="text-xl font-bold text-foreground">What $10 in Artist Earnings Actually Means</h3>
           </div>
-
-          {/* WaveWarz Economics */}
-          <div className="bg-card border border-primary/20 rounded-lg p-8 ring-1 ring-primary/10">
-            <h3 className="text-2xl font-bold text-primary mb-6">WaveWarz Economics</h3>
-            <div className="space-y-4 mb-8">
-              <ol className="space-y-3 text-foreground">
-                <li>
-                  <span className="font-semibold">1.</span> Artist enters battle (free to apply)
-                </li>
-                <li>
-                  <span className="font-semibold">2.</span> Fans stake SOL on their favorite
-                </li>
-                <li>
-                  <span className="font-semibold">3.</span> Trading volume accumulates during battle
-                </li>
-                <li>
-                  <span className="font-semibold">4.</span> Winner gets 1% of total volume in SOL
-                </li>
-                <li>
-                  <span className="font-semibold">5.</span> Instant payout when battle ends
-                </li>
-              </ol>
-            </div>
-
-            <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <p className="font-semibold text-primary mb-3">Real Example:</p>
-              <p className="text-sm text-foreground mb-2">Battle: Artist A vs Artist B</p>
-              <p className="text-sm text-foreground mb-2">Total Volume: $10,000 SOL traded</p>
-              <p className="text-sm text-foreground mb-2">Winner (Artist A) receives: <span className="text-primary font-semibold">$100 SOL</span></p>
-              <p className="text-sm text-primary font-semibold mt-4">= 33,000 Spotify streams worth of value</p>
-              <p className="text-sm text-primary font-semibold">= Earned in 30 minutes, not 3 months</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Comparison Table */}
-        <div className="mb-12 bg-card border border-border rounded-lg overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="bg-secondary/10">
                 <tr>
-                  <th className="px-6 py-4 text-left font-semibold text-foreground">Metric</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">Spotify</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">WaveWarz Main</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">WaveWarz Quick</th>
+                  <th className="px-6 py-4 text-left font-semibold text-foreground">Platform</th>
+                  <th className="px-6 py-4 text-left font-semibold text-foreground">How You Earned It</th>
+                  <th className="px-6 py-4 text-center font-semibold text-foreground">Time to Earn</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Per Play</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">$0.003</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
+                  <td className="px-6 py-4 font-black text-primary text-lg">WaveWarz</td>
+                  <td className="px-6 py-4 font-medium text-foreground">
+                    1 Quick Battle <br />
+                    <span className="text-xs text-muted-foreground">($1,000 in trading volume)</span>
+                  </td>
+                  <td className="px-6 py-4 text-center text-primary font-bold">30 Minutes</td>
                 </tr>
                 <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Per Battle</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">$150-400</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">$20-60</td>
+                  <td className="px-6 py-4 font-bold text-foreground">Spotify</td>
+                  <td className="px-6 py-4 text-muted-foreground">3,300 streams @ $0.003</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Weeks/Months</td>
                 </tr>
                 <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Payout Time</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">30-90 days</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">Instant</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">Instant</td>
+                  <td className="px-6 py-4 font-bold text-foreground">Apple Music</td>
+                  <td className="px-6 py-4 text-muted-foreground">2,500 streams @ $0.004</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Weeks/Months</td>
                 </tr>
                 <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Your Cut</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">70%</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">100% (1% vol)</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">100% (1% vol)</td>
+                  <td className="px-6 py-4 font-bold text-foreground">YouTube</td>
+                  <td className="px-6 py-4 text-muted-foreground">10,000 views @ $0.001</td>
+                  <td className="px-6 py-4 text-center text-muted-foreground">Weeks/Months</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Quick BattleZ */}
+          <div className="bg-card border border-border rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-primary mb-6">⚡ Quick BattleZ Earnings</h3>
+            <div className="space-y-4 mb-8">
+              <div className="p-4 bg-muted/30 rounded-lg border border-border">
+                <p className="font-bold text-foreground mb-3">Real Battle Example:</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Battle Volume:</span>
+                    <span className="text-foreground">$190 (typical)</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Your Side Trades:</span>
+                    <span className="text-foreground">$95</span>
+                  </li>
+                  <li className="flex justify-between font-bold text-primary">
+                    <span>Your Trading Fees:</span>
+                    <span>$0.95 (1% of side)</span>
+                  </li>
+                </ul>
+
+                <hr className="my-4 border-border" />
+
+                <div className="space-y-2">
+                  <p className="font-bold text-foreground">Battle Ends (Loser Pool $3 typical):</p>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-foreground">If You Win (+5% bonus):</span>
+                    <span className="text-primary font-black">$1.10 Total</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-foreground">If You Lose (+2% bonus):</span>
+                    <span className="text-primary font-black">$1.01 Total</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic">
+                💡 The more your fans trade, the more you earn. Higher volume = Higher fees, regardless of who wins.
+              </p>
+            </div>
+          </div>
+
+          {/* Main Events */}
+          <div className="bg-card border border-primary/20 rounded-lg p-8 ring-1 ring-primary/10">
+            <h3 className="text-2xl font-bold text-secondary mb-6">🏆 Main Event Earnings</h3>
+            <div className="space-y-4 mb-8">
+              <div className="p-4 bg-secondary/5 rounded-lg border border-secondary/20">
+                <p className="font-bold text-foreground mb-3">Real Battle Example:</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">3-Round Event Volume:</span>
+                    <span className="text-foreground">$1,200-$2,600</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="text-muted-foreground">Your Side Trades:</span>
+                    <span className="text-foreground">$600-$1,300</span>
+                  </li>
+                  <li className="flex justify-between font-bold text-secondary">
+                    <span>Your Trading Fees:</span>
+                    <span>$6-$13 (1% of side)</span>
+                  </li>
+                </ul>
+
+                <hr className="my-4 border-secondary/20" />
+
+                <div className="space-y-2">
+                  <p className="font-bold text-foreground">Battle Ends (Loser Pool $300-$600):</p>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-foreground">If You Win (+5% bonus):</span>
+                    <span className="text-secondary font-black">$21-$43 Total</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-foreground">If You Lose (+2% bonus):</span>
+                    <span className="text-secondary font-black">$12-$25 Total</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-secondary font-semibold italic">
+                💡 One Main Event = 4,000-14,000 Spotify streams worth of value. In 60 minutes instead of months.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Volume Matters More Than Winning */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground mb-8 text-center text-balance">Why Volume Matters More Than Winning</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-lg bg-background border border-border">
+              <h4 className="font-bold text-muted-foreground mb-4">🎯 Traditional Streaming</h4>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2"><span>×</span> <span>You get paid per play</span></li>
+                <li className="flex gap-2"><span>×</span> <span>$0.003 per stream</span></li>
+                <li className="flex gap-2"><span>×</span> <span>Need millions to make rent</span></li>
+                <li className="flex gap-2"><span>×</span> <span>Takes months to accumulate</span></li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg bg-background border border-border">
+              <h4 className="font-bold text-muted-foreground mb-4">💔 Traditional Battles</h4>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2"><span>×</span> <span>Winner takes all</span></li>
+                <li className="flex gap-2"><span>×</span> <span>Loser gets nothing</span></li>
+                <li className="flex gap-2"><span>×</span> <span>All-or-nothing pressure</span></li>
+                <li className="flex gap-2"><span>×</span> <span>Earnings tied to winning</span></li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg bg-card border border-primary/50 relative">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-black px-2 py-0.5 rounded-bl">RECOMMENDED</div>
+              <h4 className="font-bold text-primary mb-4">✅ WaveWarz Model</h4>
+              <ul className="space-y-2 text-sm text-foreground">
+                <li className="flex gap-2"><span className="text-primary">✓</span> <span>Earn from trading fees</span></li>
+                <li className="flex gap-2"><span className="text-primary">✓</span> <span>1% of your side's volume</span></li>
+                <li className="flex gap-2"><span className="text-primary">✓</span> <span>More trading = more earnings</span></li>
+                <li className="flex gap-2"><span className="text-primary">✓</span> <span>Win or lose, you get paid</span></li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-primary/10">
+                <p className="text-xs font-bold text-primary">Settlement bonus is just extra: Winner +5%, Loser +2%</p>
+              </div>
+            </div>
           </div>
         </div>
 

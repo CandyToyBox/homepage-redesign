@@ -3,36 +3,37 @@ import { Music, Vote, Trophy, DollarSign } from "lucide-react"
 const features = [
   {
     icon: Music,
-    title: "Music Battles",
-    description: "Two artists go head-to-head. You pick the winner.",
+    title: "Competition Breeds Quality",
+    description: "The pressure of the stage pushes artists to perform better and create high-stakes hits.",
   },
   {
     icon: Vote,
-    title: "Back Your Pick",
-    description: "Put money behind your artist. Start with as little as $1.",
+    title: "Support Your Athletes",
+    description: "Musicians are the athletes of the sonic world. Back them with SOL and share in their win.",
   },
   {
     icon: Trophy,
-    title: "Win If You're Right",
-    description: "Your artist wins? You get a share of the prize pool.",
+    title: "Reward Excellence",
+    description: "Winning isn't just about the chart—it's about the payout. 1% of every trade goes straight to the artist.",
   },
   {
     icon: DollarSign,
-    title: "Cash Out Anytime",
-    description: "Sell your position before the battle ends. Never locked in.",
+    title: "Fans Get Skin in the Game",
+    description: "Trade the outcome, manage your risk with 50% downside protection, and earn onchain.",
   },
 ]
 
 export function WhatIsWaveWarz() {
   return (
-    <section className="py-16 px-4" aria-labelledby="what-is-wavewarz">
+    <section className="py-20 px-4 bg-background relative overflow-hidden" aria-labelledby="what-is-wavewarz">
       <div className="max-w-5xl mx-auto">
-        <header className="text-center mb-12">
-          <h2 id="what-is-wavewarz" className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-            What is <span className="text-primary">WaveWarZ</span>?
+        <header className="text-center mb-16">
+          <h2 id="what-is-wavewarz" className="text-4xl md:text-5xl font-black text-foreground mb-6">
+            Beyond Streaming: <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">True Music Competition</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A music battle game where fans compete. Pick a side, back your artist, win money.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            WaveWarZ isn't just another platform. It's a digital arena where competition creates value.
+            When artists battle, the music gets better, the fans get closer, and everyone gets paid fairly.
           </p>
         </header>
 

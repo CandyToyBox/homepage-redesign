@@ -15,17 +15,17 @@ export function SocialProof() {
         </div>
 
         {/* Aggregated Data */}
-        <p className="text-center text-muted-foreground mb-8">
-          From 92 Quick BattleZ: 847 traders participated. $38,500 traded. Artists earned instant SOL. Traders earned or got 50% back. Zero delays. Zero rugpulls.
+        <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
+          From 92 Quick BattleZ: 847 traders participated. $40,000+ traded. Artists earned instant SOL. Traders earned or got 50% downside protection. Zero delays. Zero platform risk.
         </p>
 
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 text-center">
           {[
             { number: "$40,283", label: "Total Volume" },
-            { number: "$450", label: "Paid to Artists" },
+            { number: "92", label: "Quick Battles" },
             { number: "98", label: "Main Battles" },
-            { number: "337", label: "All Battles" },
+            { number: "190", label: "Total Battles" },
           ].map((stat, i) => (
             <div key={i} className="p-4 rounded-lg bg-background border border-border">
               <div className="text-3xl md:text-4xl font-black text-primary mb-2">{stat.number}</div>
@@ -49,7 +49,7 @@ export function SocialProof() {
               name: "Marcus Chen",
               role: "Solana Trader, Austin",
               quote:
-                '"After getting rugged on pump.fun for the hundredth time, the 50% back protection actually lets me trade for entertainment without the constant fear. Plus the battles are legitimately fun to watch live."',
+                '"After getting rugged elsewhere for the hundredth time, the 50% downside protection actually lets me trade for entertainment without the constant fear. Plus the battles are legitimately fun to watch live."',
               badge: "15 battles traded • 60% win rate • Net positive in SOL",
               cta: "Watch a Battle →",
             },

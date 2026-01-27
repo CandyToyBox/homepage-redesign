@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Youtube, Twitter, MessageCircle, FileText, BookOpen, Heart, Handshake } from "lucide-react"
+import { Youtube, Twitter, MessageCircle, FileText, BookOpen, Heart, Handshake, Instagram, Linkedin, Send, Radio } from "lucide-react"
 
 const footerLinks = {
   product: [
@@ -12,7 +12,8 @@ const footerLinks = {
   resources: [
     { label: "Whitepaper", href: "/whitepaper", icon: FileText },
     { label: "Documentation", href: "/docs", icon: BookOpen },
-    { label: "How It Works", href: "#how-it-works" },
+    { label: "SOLScan Program", href: "https://solscan.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo?cluster=mainnet" },
+    { label: "Historical Data", href: "https://orbmarkets.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo/history" },
     { label: "FAQ", href: "#faq" },
   ],
   community: [
@@ -25,8 +26,14 @@ const footerLinks = {
 
 const socials = [
   { label: "YouTube", href: "https://youtube.com/@WaveWarZ", icon: Youtube },
-  { label: "Twitter", href: "https://twitter.com/WaveWarZ", icon: Twitter },
-  { label: "Discord", href: "https://discord.gg/wavewarz", icon: MessageCircle },
+  { label: "X", href: "https://x.com/WaveWarZ", icon: Twitter },
+  { label: "Twitch", href: "https://www.twitch.tv/wavewarzofficial", icon: Radio },
+  { label: "Discord", href: "https://discord.com/invite/bktETHgsKh", icon: MessageCircle },
+  { label: "Telegram", href: "https://t.me/wavewarz", icon: Send },
+  { label: "Instagram", href: "https://instagram.com/wavewarz", icon: Instagram },
+  { label: "TikTok", href: "https://www.tiktok.com/@wavewarzofficial", icon: Youtube },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/wave-warz/", icon: Linkedin },
+  { label: "Farcaster", href: "https://farcaster.xyz/wavewarz", icon: MessageCircle },
 ]
 
 export function Footer() {

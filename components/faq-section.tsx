@@ -6,57 +6,57 @@ import { cn } from "@/lib/utils"
 
 const musicianFaqs = [
   {
-    question: "How much can I earn?",
+    question: "How do I actually get paid?",
     answer:
-      "It depends on how many people trade on your music. Quick BattleZ averages $10-50 per battle. Main Events average $200-400. More promotion = More battles = More earnings. There's no limit to how many times your music can battle.",
+      "Two ways, automatically: (1) DURING THE BATTLE: Fans trade on your side and you earn 1% of that volume continuously, no matter who wins. (2) WHEN BATTLE ENDS: Smart contract calculates settlement bonuses. Winner gets 5% of loser's pool, loser gets 2%. All paid instantly in SOL to your wallet.",
   },
   {
-    question: "How do I add my music?",
+    question: "What if my fans don't trade much?",
     answer:
-      "Upload your music to Audius (free). Come to WaveWarz, connect your Solana wallet, click 'Join Catalog,' log in with your Audius profile, and authorize the sync. Your music will then be available for Quick BattleZ battles immediately.",
+      "Then you don't earn much from that specific battle. But more battles = more chances. Quick BattleZ run 24/7. Think of it like streaming: consistent catalog + engaged fans = real income. WaveWarz pays 300x better per 'play' than Spotify.",
   },
   {
-    question: "When do I get paid?",
+    question: "How does this compare to Spotify?",
     answer:
-      "Instantly. 1% of every trade on your music hits your Solana wallet in real-time. When the battle ends, any settlement bonuses are paid immediately. No waiting. No delays.",
+      "Quick Battle ($10 earned) = 3,300 Spotify streams. Main Event ($25 earned) = 8,300 Spotify streams. WaveWarz offers 300x higher per-play value, instant SOL payouts, and you keep 100% of your rights. Use Spotify for discovery, Battle on WaveWarz for income.",
   },
   {
-    question: "What if I lose?",
+    question: "How do I get my music into Quick BattleZ?",
     answer:
-      "You still earn. Losing artists get 1% of all trades on their side + 2% from the loser's pool. You don't earn as much as winning, but you still get paid.",
+      "Step 1: Upload to Audius (audius.co). Step 2: Connect to WaveWarz and click 'Sync Audius Music'. Step 3: Authorize the sync. Your music automatically enters the Quick Battle rotation. No application or approval process needed.",
   },
   {
-    question: "Do I have to promote my music?",
+    question: "What if I don't have a Solana wallet?",
     answer:
-      "Promotion helps. More people know about your battle = More traders come = More volume = More earnings. WaveWarz does promotion on our channels, but your effort multiplies the effect.",
+      "Setup takes 2 minutes: Download Phantom wallet (free), create your wallet (save your seed phrase!), and we'll send earnings there. You can cash out SOL to USD anytime via Coinbase or other exchanges.",
   },
 ]
 
 const traderFaqs = [
   {
-    question: "What's the risk?",
+    question: "What if I pick the losing side?",
     answer:
-      "Maximum loss per battle is 50%. You always get 50% back if you lose. No total wipeouts.",
+      "You get 50% downside protection automatically. If you stake 1 SOL and lose, you receive 0.5 SOL back instantly. No total wipeouts like other platforms.",
   },
   {
-    question: "When can I trade?",
+    question: "How do I know which artist will win?",
     answer:
-      "Anytime a battle is live. New Quick BattleZ launches every few minutes. Main Events are scheduled. Community Battles are hosted by creators. There's always something to trade.",
+      "The winner is whichever side has more SOL in their pool when time expires. You can use strategy: check artist stats, volume trends, and community sentiment. Early trades often get better prices on the bonding curve.",
   },
   {
-    question: "How do I know the results are fair?",
+    question: "Can I withdraw during a battle?",
     answer:
-      "Main Events use triple judging: Charts (TVL), Judges panel, and Community poll. Quick BattleZ use Charts (TVL). Community Battles use Charts + Community voting. All data is traceable on Solana. Check Statz for real-time battle data.",
+      "No, but battles are quick: 30-60 minutes. Once the battle settles (usually 1 minute after it ends), your SOL is instantly available in your wallet for withdrawal or next trade.",
+  },
+  {
+    question: "What's the minimum stake?",
+    answer:
+      "Start small: Minimum is 0.01 SOL (~$2-3). We recommend 0.1-0.5 SOL for your first few battles to learn the flow and test the 50% downside protection.",
   },
   {
     question: "Is this gambling?",
     answer:
-      "It's speculation with real stakes and real protections. You're betting on real music, real artists, real community engagement. The 50% back guarantee means it's not pure gambling. And your stake directly pays the artist you're backing.",
-  },
-  {
-    question: "Can I withdraw anytime?",
-    answer:
-      "After the battle ends, yes. SOL settles instantly. You can then withdraw to your personal wallet or re-stake in the next battle.",
+      "It's speculation with real stakes and real protection. You're supporting real artists and the 50% downside protection limits your risk. Every stake directly funds the musician you're backing.",
   },
 ]
 

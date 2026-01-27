@@ -19,9 +19,9 @@ export function TeamSection() {
             {
               name: "Hurric4n3ike",
               title: "Co-Founder & Engineering",
-              bio: "Solana developer who manages the production database and smart contracts. Built the on-chain battle infrastructure powering music competition.",
+              bio: "Solana developer who manages the production database and smart contracts. Built the onchain battle infrastructure powering music competition.",
               quote:
-                '"We\'re building the on-chain infrastructure for music competition. This is just the beginning."',
+                '"We\'re building the onchain infrastructure for music competition. This is just the beginning."',
               links: [
                 { label: "X/Twitter", url: "#" },
                 { label: "GitHub", url: "#" },

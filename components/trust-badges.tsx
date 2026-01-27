@@ -3,7 +3,7 @@
 const badges = [
   {
     title: "Built on Solana Mainnet",
-    description: "Every transaction is verified on-chain. Transparent and permanent."
+    description: "Every transaction is verified onchain. Transparent and permanent."
   },
   {
     title: "50% Downside Protection",
