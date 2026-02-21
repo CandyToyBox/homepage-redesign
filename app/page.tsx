@@ -161,7 +161,7 @@ export default function Home() {
         <ArtistCatalog />
 
         {/* 5. COMMUNITY: Connect with others */}
-        <CommunitySpaces />
+        <ContentCommunity />
 
         {/* 6. VALUE: Redesigned Monetization & Economics */}
         <ArtistMonetization />
