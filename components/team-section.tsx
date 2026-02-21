@@ -16,27 +16,34 @@ export function TeamSection() {
         <div className="grid md:grid-cols-2 gap-12 mb-12">
           {[
             {
-              name: "Candy",
-              title: "Co-Founder & Product",
-              bio: "Music industry veteran and vibe coder (Ohara, Claude, Replit) who built the analytics platform serving the WaveWarz community. Passionate about fair artist compensation.",
-              quote: '"Musicians deserve to be paid like the athletes they are. WaveWarz makes that happen."',
-              links: [
-                { label: "X/Twitter", url: "#" },
-                { label: "LinkedIn", url: "#" },
-              ],
-              image: "[PLACEHOLDER: 300x300 - Candy headshot]",
-            },
-            {
               name: "Hurric4n3ike",
               title: "Co-Founder & Engineering",
-              bio: "Solana developer who manages the production database and smart contracts. Built the on-chain battle infrastructure powering music competition.",
               quote:
-                '"We\'re building the on-chain infrastructure for music competition. This is just the beginning."',
+                '"We\'re building the onchain infrastructure for music competition. This is just the beginning."',
               links: [
-                { label: "X/Twitter", url: "#" },
+                { label: "X/Twitter", url: "https://x.com/hurric4n3ike" },
                 { label: "GitHub", url: "#" },
               ],
-              image: "[PLACEHOLDER: 300x300 - Hurric4n3ike headshot]",
+              image: "/images/team-hurric4n3ike.png",
+            },
+            {
+              name: "Zaal",
+              title: "Co-Founder & Systems Architecture",
+              quote: '"Building the infrastructure that connects artists, traders, and fans in a transparent ecosystem."',
+              links: [
+                { label: "X/Twitter", url: "https://x.com/bettercallzaal" },
+              ],
+              image: "/images/team-zaal.png",
+            },
+            {
+              name: "Candy",
+              title: "Co-Founder & Product",
+              quote: '"Musicians deserve to be paid like the athletes they are. WaveWarz makes that happen."',
+              links: [
+                { label: "X/Twitter", url: "https://x.com/candytoyboxyt1" },
+                { label: "LinkedIn", url: "#" },
+              ],
+              image: "/images/team-candy.png",
             },
           ].map((founder, i) => (
             <div key={i} className="bg-card border border-border rounded-lg overflow-hidden">
@@ -51,9 +58,7 @@ export function TeamSection() {
                   <p className="text-sm font-semibold text-primary uppercase tracking-wide">{founder.title}</p>
                 </div>
 
-                <p className="text-sm text-foreground">{founder.bio}</p>
-
-                <p className="italic text-foreground">{founder.quote}</p>
+                <p className="italic text-sm text-foreground">{founder.quote}</p>
 
                 <div className="flex gap-4 pt-4">
                   {founder.links.map((link, j) => (
@@ -69,13 +74,6 @@ export function TeamSection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="#">
-            <Button size="lg">
-              Join the Team →
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   )

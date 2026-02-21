@@ -5,147 +5,132 @@ import Link from "next/link"
 
 export function ArtistMonetization() {
   return (
-    <section className="py-20 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-24 bg-[#030305] relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5" />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-balance">
-            Athletes Get Paid Like Athletes,
-            <br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Not Like Streamers</span>
+          <h2 className="text-5xl md:text-7xl font-black text-foreground mb-6 uppercase tracking-tight">
+            Musicians Finally <br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Get Paid</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Streaming pays fractions of a penny. WaveWarz pays from trading volume. Here's the math.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            WaveWarz fundamentally changes how musicians earn from their work. Not per-stream. Not per-play. Per-trade. Instantly.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Spotify Economics */}
-          <div className="bg-card border border-border rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Spotify Economics</h3>
-            <div className="space-y-4 mb-8">
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">10,000 streams</span>
-                <span className="text-muted-foreground">= $30-50</span>
+          <div className="bg-[#0A0B10] border border-white/5 rounded-3xl p-8 lg:p-12">
+            <h3 className="text-2xl font-black text-foreground mb-10">Spotify Economics</h3>
+            <div className="space-y-8">
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-muted-foreground font-bold">10,000 streams</span>
+                <span className="text-foreground font-black text-xl">= $30-50</span>
               </div>
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">100,000 streams</span>
-                <span className="text-muted-foreground">= $300-500</span>
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-muted-foreground font-bold">100,000 streams</span>
+                <span className="text-foreground font-black text-xl">= $300-500</span>
               </div>
-              <div className="flex justify-between pb-3 border-b border-border">
-                <span className="text-foreground">1,000,000 streams</span>
-                <span className="text-muted-foreground">= $3,000-5,000</span>
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-muted-foreground font-bold">1,000,000 streams</span>
+                <span className="text-foreground font-black text-xl">= $3,000-5,000</span>
               </div>
-              <div className="pt-4 space-y-2">
-                <p className="text-sm text-foreground">
-                  <span className="font-semibold">You get:</span> $0.003-0.005 per stream
-                </p>
-                <p className="text-sm text-foreground">
-                  <span className="font-semibold">Time to earn:</span> Months to years
-                </p>
-              </div>
+            </div>
+            <div className="mt-12 space-y-2">
+              <p className="text-sm text-muted-foreground">You get: <span className="text-foreground font-bold">$0.003-0.005 per stream</span></p>
+              <p className="text-sm text-muted-foreground">Time to earn: <span className="text-foreground font-bold">Months to years</span></p>
             </div>
           </div>
 
-          {/* WaveWarz Economics */}
-          <div className="bg-card border border-primary/20 rounded-lg p-8 ring-1 ring-primary/10">
-            <h3 className="text-2xl font-bold text-primary mb-6">WaveWarz Economics</h3>
-            <div className="space-y-4 mb-8">
-              <ol className="space-y-3 text-foreground">
-                <li>
-                  <span className="font-semibold">1.</span> Artist enters battle (free to apply)
+          {/* WaveWarZ Economics */}
+          <div className="bg-[#0A0B10] border border-primary/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <h3 className="text-2xl font-black text-primary mb-10">WaveWarZ Economics</h3>
+            <ol className="space-y-4 mb-12">
+              {[
+                "Artist enters battle (free to apply)",
+                "Fans stake SOL on their favorite",
+                "Trading volume accumulates during battle",
+                "Winner gets 1% of total volume in SOL",
+                "Instant payout when battle ends",
+              ].map((step, i) => (
+                <li key={i} className="flex gap-4 text-foreground font-bold">
+                  <span className="text-primary">{i + 1}.</span>
+                  {step}
                 </li>
-                <li>
-                  <span className="font-semibold">2.</span> Fans stake SOL on their favorite
-                </li>
-                <li>
-                  <span className="font-semibold">3.</span> Trading volume accumulates during battle
-                </li>
-                <li>
-                  <span className="font-semibold">4.</span> Winner gets 1% of total volume in SOL
-                </li>
-                <li>
-                  <span className="font-semibold">5.</span> Instant payout when battle ends
-                </li>
-              </ol>
-            </div>
+              ))}
+            </ol>
 
-            <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
-              <p className="font-semibold text-primary mb-3">Real Example:</p>
-              <p className="text-sm text-foreground mb-2">Battle: Artist A vs Artist B</p>
-              <p className="text-sm text-foreground mb-2">Total Volume: $10,000 SOL traded</p>
-              <p className="text-sm text-foreground mb-2">Winner (Artist A) receives: <span className="text-primary font-semibold">$100 SOL</span></p>
-              <p className="text-sm text-primary font-semibold mt-4">= 33,000 Spotify streams worth of value</p>
-              <p className="text-sm text-primary font-semibold">= Earned in 30 minutes, not 3 months</p>
+            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6">
+              <p className="text-primary font-black text-sm uppercase tracking-widest mb-4">Real Example:</p>
+              <div className="space-y-2 text-sm">
+                <p className="text-muted-foreground font-bold">Battle: Artist A vs Artist B</p>
+                <p className="text-muted-foreground font-bold">Total Volume: $10,000 SOL traded</p>
+                <p className="text-foreground font-black text-lg">Winner (Artist A) receives: <span className="text-primary">$100 SOL</span></p>
+                <div className="pt-4 mt-4 border-t border-primary/10 space-y-1">
+                  <p className="text-primary font-bold">= 33,000 Spotify streams worth of value</p>
+                  <p className="text-primary font-bold">= Earned in 30 minutes, not 3 months</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Comparison Table */}
-        <div className="mb-12 bg-card border border-border rounded-lg overflow-hidden">
+        {/* Detailed Comparison Table */}
+        <div className="bg-[#0A0B10] border border-white/5 rounded-3xl overflow-hidden mb-12">
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-secondary/10">
-                <tr>
-                  <th className="px-6 py-4 text-left font-semibold text-foreground">Metric</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">Spotify</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">WaveWarz Main</th>
-                  <th className="px-6 py-4 text-center font-semibold text-foreground">WaveWarz Quick</th>
+            <table className="w-full">
+              <thead>
+                <tr className="bg-white/5">
+                  <th className="px-8 py-6 text-left text-xs font-black text-muted-foreground uppercase tracking-widest">Metric</th>
+                  <th className="px-8 py-6 text-left text-xs font-black text-muted-foreground uppercase tracking-widest">Spotify</th>
+                  <th className="px-8 py-6 text-left text-xs font-black text-primary uppercase tracking-widest">WaveWarz Main</th>
+                  <th className="px-8 py-6 text-left text-xs font-black text-secondary uppercase tracking-widest">WaveWarz Quick</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Per Play</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">$0.003</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
-                </tr>
-                <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Per Battle</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">N/A</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">$150-400</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">$20-60</td>
-                </tr>
-                <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Payout Time</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">30-90 days</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">Instant</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">Instant</td>
-                </tr>
-                <tr className="border-t border-border">
-                  <td className="px-6 py-4 font-medium text-foreground">Your Cut</td>
-                  <td className="px-6 py-4 text-center text-muted-foreground">70%</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">100% (1% vol)</td>
-                  <td className="px-6 py-4 text-center text-primary font-semibold">100% (1% vol)</td>
-                </tr>
+                {[
+                  { metric: "Per Play", spotify: "$0.003", main: "N/A", quick: "N/A" },
+                  { metric: "Per Battle", spotify: "N/A", main: "$150-400", quick: "$20-60" },
+                  { metric: "Payout Time", spotify: "30-90 days", main: "Instant", quick: "Instant" },
+                  { metric: "Your Cut", spotify: "70%", main: "100% (1% vol)", quick: "100% (1% vol)" },
+                ].map((row, i) => (
+                  <tr key={i} className="border-t border-white/5">
+                    <td className="px-8 py-6 text-sm font-bold text-foreground">{row.metric}</td>
+                    <td className="px-8 py-6 text-sm font-bold text-muted-foreground">{row.spotify}</td>
+                    <td className="px-8 py-6 text-sm font-black text-primary">{row.main}</td>
+                    <td className="px-8 py-6 text-sm font-black text-secondary">{row.quick}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
 
-        {/* Benefits */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        {/* Benefit Tiles */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {[
             { title: "Volume-Driven Revenue", desc: "More fans = more trades = more earnings" },
             { title: "Instant SOL Payouts", desc: "No 30-day wait, no label cut" },
             { title: "Build Your Fanbase", desc: "Fans invest in you, literally" },
             { title: "Keep Your Rights", desc: "You own everything, we just host" },
           ].map((benefit, i) => (
-            <div key={i} className="p-6 rounded-lg bg-card border border-border">
-              <h4 className="font-bold text-foreground mb-2">{benefit.title}</h4>
-              <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+            <div key={i} className="bg-[#0A0B10] border border-white/5 p-6 rounded-2xl">
+              <h4 className="font-black text-foreground text-sm uppercase tracking-tight mb-2">{benefit.title}</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">{benefit.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="#">
-            <Button size="lg">
+          <Link href="/artists/signup">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-black px-10 h-14 rounded-2xl shadow-[0_0_30px_rgba(94,234,128,0.2)]">
               Apply as Artist →
             </Button>
           </Link>
-          <Link href="#">
-            <Button variant="outline" size="lg">
+          <Link href="/audius/search">
+            <Button size="lg" variant="outline" className="border-white/10 bg-white/5 text-foreground hover:bg-white/10 font-black px-10 h-14 rounded-2xl">
               View Artist Catalog →
             </Button>
           </Link>

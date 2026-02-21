@@ -141,56 +141,50 @@ export default function Home() {
         {/* 1. ABOVE THE FOLD: Hook + CTAs */}
         <HeroSection />
         <TrustBadges />
-        
-        {/* 2. IMMEDIATE ACTION: Livestream + Quick Battles */}
-        <LivestreamCTA />
-        <TabsSection
-          activeTab={activeTab}
-          onTabChange={setActiveTab}
-          quickActive={mockQuickActive}
-          quickQueued={mockQuickQueued}
-          activeCommunityBattles={mockActiveCommunityBattles}
-        />
 
-        {/* 3. EDUCATE: What is this? */}
-        <WhatIsWaveWarz />
-
-        {/* 4. RISK MANAGEMENT: Safety net message */}
-        <RiskProtection />
-
-        {/* 5. SHOW OPTIONS: Three battle types */}
+        {/* 2. DISCOVERY: Three Ways to Battle */}
         <BattleTypes />
 
-        {/* 6. HOW TO START: Beginner steps */}
-        <HowItWorks />
+        {/* 3. LIVE INTERACTION: CTA + Product */}
+        <LivestreamCTA />
+        <div id="tabs-section">
+          <TabsSection
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            quickActive={mockQuickActive}
+            quickQueued={mockQuickQueued}
+            activeCommunityBattles={mockActiveCommunityBattles}
+          />
+        </div>
 
-        {/* 7. SOCIAL PROOF: Real people + stats */}
-        <SocialProof />
-
-        {/* 8. MONETIZATION: Why artists care */}
-        <ArtistMonetization />
-
-        {/* 9. ECONOMICS: Transparency */}
-        <EconomicsTransparency />
-
-        {/* 10. ARTIST CATALOG: Browse & battle */}
+        {/* 4. TALENT POOL: Audius Onboarding & Catalog */}
         <ArtistCatalog />
 
-        {/* 11. COMMUNITY: More than battles */}
-        <ContentCommunity />
+        {/* 5. COMMUNITY: Connect with others */}
+        <CommunitySpaces />
 
-        {/* 12. VALUES: Charity + Sponsors */}
+        {/* 6. VALUE: Redesigned Monetization & Economics */}
+        <ArtistMonetization />
+
+        {/* 7. PHILOSOPHY: Competition drives quality */}
+        <WhatIsWaveWarz />
+
+        {/* 8. IMPACT & PARTNERSHIPS */}
         <CharityHighlight />
         <SponsorsSection />
 
-        {/* 13. TEAM: Who's building */}
-        <TeamSection />
+        {/* 9. TRANSPARENCY & RISK: Technical safety */}
+        <EconomicsTransparency />
 
-        {/* 14. DISCOVERY: Past battles */}
+        {/* 10. SOCIAL PROOF & DISCOVERY */}
+        <SocialProof />
+        <StatsSection />
         <FeaturedBattle battle={mockFeaturedBattle} />
         <PastBattles battles={mockPastBattles} />
 
-        {/* 15. TRUST: Video + FAQ */}
+        {/* 11. EDUCATION & TEAM */}
+        <HowItWorks />
+        <TeamSection />
         <YoutubeEmbed />
         <FAQSection />
       </main>
