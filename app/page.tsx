@@ -5,32 +5,15 @@ import { HypeBanner } from "@/components/hype-banner"
 import { MainnetBanner } from "@/components/mainnet-banner"
 import { Header } from "@/components/header"
 import { TabsSection } from "@/components/tabs-section"
-import { HeroSection } from "@/components/hero-section"
-import { TrustBadges } from "@/components/trust-badges"
 import { BattleSearch } from "@/components/battle-search"
 import { FeaturedBattle } from "@/components/featured-battle"
 import { PastBattles } from "@/components/past-battles"
 import { ArtistSignup } from "@/components/artist-signup"
-import { WhatIsWaveWarz } from "@/components/what-is-wavewarz"
-import { HowItWorks } from "@/components/how-it-works"
-import { StatsSection } from "@/components/stats-section"
-import { FAQSection } from "@/components/faq-section"
-import { LivestreamCTA } from "@/components/livestream-cta"
-import { YoutubeEmbed } from "@/components/youtube-embed"
-import { ArtistEarnings } from "@/components/artist-earnings"
-import { CharityHighlight } from "@/components/charity-highlight"
-import { SponsorsSection } from "@/components/sponsors-section"
-import { Footer } from "@/components/footer"
-import { RiskProtection } from "@/components/risk-protection"
 import { BattleTypes } from "@/components/battle-types"
-import { SocialProof } from "@/components/social-proof"
-import { ArtistMonetization } from "@/components/artist-monetization"
-import { EconomicsTransparency } from "@/components/economics-transparency"
-import { TeamSection } from "@/components/team-section"
-import { ContentCommunity } from "@/components/content-community"
-import { ArtistCatalog } from "@/components/artist-catalog"
+import { Footer } from "@/components/footer"
+import { EconomicsSimplified } from "@/components/economics-simplified"
 
-// Mock data - replace with real API calls
+// Mock data
 const mockFeaturedBattle = {
   battleId: "featured-001",
   artist1Name: "Kendrick Lamar",
@@ -47,7 +30,12 @@ const mockPastBattles = [
     artist2Name: "Beyoncé",
     imageUrl: "/pop-music-battle-stage.jpg",
   },
-  { battleId: "past-002", artist1Name: "Eminem", artist2Name: "Jay-Z", imageUrl: "/rap-battle-hip-hop-stage.jpg" },
+  {
+    battleId: "past-002",
+    artist1Name: "Eminem",
+    artist2Name: "Jay-Z",
+    imageUrl: "/rap-battle-hip-hop-stage.jpg",
+  },
   {
     battleId: "past-003",
     artist1Name: "The Weeknd",
@@ -127,10 +115,9 @@ const mockActiveCommunityBattles = [
 ]
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<"quick" | "community">("quick")
+  const [activeTab, setActiveTab] = useState("quick")
   const [showArtistForm, setShowArtistForm] = useState(false)
 
-  // Production flow: Hook → Trust → Battle types → Risk → Proof → Monetization → Economics → Catalog → Community → Charity/Sponsors → Team → FAQ
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <HypeBanner />
@@ -138,54 +125,32 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow">
-        {/* 1. ABOVE THE FOLD: Hook + CTAs */}
-        <HeroSection />
-        <TrustBadges />
+        {/* ACTIVE QUICK BATTLE: Feature the currently trading battle at the top */}
+        <TabsSection
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          quickActive={mockQuickActive}
+          quickQueued={mockQuickQueued}
+          activeCommunityBattles={mockActiveCommunityBattles}
+        />
 
-        {/* 2. DISCOVERY: Three Ways to Battle */}
+        {/* BATTLE OPTIONS: 3 clean cards showing Main Event, Quick BattleZ, Community BattleZ */}
         <BattleTypes />
 
-        {/* 3. LIVE INTERACTION: CTA + Product */}
-        <LivestreamCTA />
-        <div id="tabs-section">
-          <TabsSection
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            quickActive={mockQuickActive}
-            quickQueued={mockQuickQueued}
-            activeCommunityBattles={mockActiveCommunityBattles}
-          />
-        </div>
-
-        {/* 4. TALENT POOL: Audius Onboarding & Catalog */}
-        <ArtistCatalog />
-
-        {/* 5. VALUE: Redesigned Monetization & Economics */}
-        <ArtistMonetization />
-
-        {/* 7. PHILOSOPHY: Competition drives quality */}
-        <WhatIsWaveWarz />
-
-        {/* 8. IMPACT & PARTNERSHIPS */}
-        <CharityHighlight />
-        <SponsorsSection />
-
-        {/* 9. TRANSPARENCY & RISK: Technical safety */}
-        <EconomicsTransparency />
-
-        {/* 10. SOCIAL PROOF & DISCOVERY */}
-        <SocialProof />
-        <StatsSection />
+        {/* FEATURED BATTLE: Center stage for the most traded battle */}
         <FeaturedBattle battle={mockFeaturedBattle} />
+
+        {/* PAST BATTLES: Social proof - see what's already happened */}
         <PastBattles battles={mockPastBattles} />
 
-        {/* 11. EDUCATION & TEAM */}
-        <HowItWorks />
-        <TeamSection />
-        <YoutubeEmbed />
-        <FAQSection />
+        {/* SEARCH & DISCOVER */}
+        <BattleSearch />
+
+        {/* ECONOMICS: Clean, simplified fee & payout structure */}
+        <EconomicsSimplified />
       </main>
 
+      {/* Artist signup CTA */}
       <ArtistSignup showForm={showArtistForm} onToggleForm={() => setShowArtistForm(!showArtistForm)} />
       <Footer />
     </div>
