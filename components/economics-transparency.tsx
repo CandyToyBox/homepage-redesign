@@ -106,31 +106,18 @@ export function EconomicsTransparency() {
             <div className="flex gap-4 items-start">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">3</div>
               <div>
-                <p className="font-semibold text-foreground">All Payouts Instant, onchain, in SOL</p>
+                <p className="font-semibold text-foreground">All Payouts Instant, On-Chain, in SOL</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="https://solscan.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo?cluster=mainnet"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="bg-primary text-primary-foreground font-bold px-8">
-              Verify Program on Solscan →
+        <div className="text-center">
+          <Link href="#">
+            <Button size="lg">
+              View Smart Contract on Solana Explorer →
             </Button>
-          </a>
-          <a
-            href="https://orbmarkets.io/address/9TUfEHvk5fN5vogtQyrefgNqzKy2Bqb4nWVhSFUg2fYo/history"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            View Historical Data (Orb Markets)
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
 
 export function TeamSection() {
   return (
@@ -14,7 +13,7 @@ export function TeamSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {[
             {
               name: "Hurric4n3ike",
@@ -47,27 +46,21 @@ export function TeamSection() {
               image: "/images/team-candy.png",
             },
           ].map((founder, i) => (
-            <div key={i} className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-              {/* Founder Image */}
-              <div className="h-64 bg-secondary/10 relative overflow-hidden">
-                <Image
-                  src={founder.image}
-                  alt={founder.name}
-                  fill
-                  className="object-cover grayscale"
-                  priority={i === 0}
-                />
+            <div key={i} className="bg-card border border-border rounded-lg overflow-hidden">
+              {/* Image Placeholder */}
+              <div className="h-64 bg-secondary/10 flex items-center justify-center text-sm text-muted-foreground p-4 text-center">
+                {founder.image}
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-8 space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">{founder.name}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{founder.name}</h3>
                   <p className="text-sm font-semibold text-primary uppercase tracking-wide">{founder.title}</p>
                 </div>
 
                 <p className="italic text-sm text-foreground">{founder.quote}</p>
 
-                <div className="flex gap-2 pt-2">
+                <div className="flex gap-4 pt-4">
                   {founder.links.map((link, j) => (
                     <Link key={j} href={link.url}>
                       <Button variant="ghost" size="sm">
