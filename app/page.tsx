@@ -30,12 +30,7 @@ const mockPastBattles = [
     artist2Name: "Beyoncé",
     imageUrl: "/pop-music-battle-stage.jpg",
   },
-  {
-    battleId: "past-002",
-    artist1Name: "Eminem",
-    artist2Name: "Jay-Z",
-    imageUrl: "/rap-battle-hip-hop-stage.jpg",
-  },
+  { battleId: "past-002", artist1Name: "Eminem", artist2Name: "Jay-Z", imageUrl: "/rap-battle-hip-hop-stage.jpg" },
   {
     battleId: "past-003",
     artist1Name: "The Weeknd",
@@ -119,7 +114,7 @@ export default function Home() {
   const [showArtistForm, setShowArtistForm] = useState(false)
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#050507" }}>
       <HypeBanner />
       <MainnetBanner />
       <Header />
