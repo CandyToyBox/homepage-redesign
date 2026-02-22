@@ -160,10 +160,7 @@ export default function Home() {
         {/* 4. TALENT POOL: Audius Onboarding & Catalog */}
         <ArtistCatalog />
 
-        {/* 5. COMMUNITY: Connect with others */}
-        <CommunitySpaces />
-
-        {/* 6. VALUE: Redesigned Monetization & Economics */}
+        {/* 5. VALUE: Redesigned Monetization & Economics */}
         <ArtistMonetization />
 
         {/* 7. PHILOSOPHY: Competition drives quality */}
